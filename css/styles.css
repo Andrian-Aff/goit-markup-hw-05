@@ -39,8 +39,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  margin: 0;
-  padding: 0;
 }
 
 .link {
@@ -676,6 +674,7 @@ body {
 .progect-list-wrapper {
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 
 .project-link:hover .overlay-portfolio,
