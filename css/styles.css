@@ -77,16 +77,6 @@ body {
   color: var(--accent-color);
 }
 
-.current::after {
-  display: inline-block;
-  margin: 0;
-  content: "";
-  width: 100%;
-  height: 4px;
-  background: var(--accent-color);
-  border-radius: 2px;
-  transform: translateY(36px);
-  }
 /*==============END MAIN STYLES CSS======================*/
 
 /* CONTAINER */
@@ -153,6 +143,7 @@ body {
 }
 
 .navigation-link {
+  position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -163,6 +154,17 @@ body {
   color: var(--main-color);
 
   transition: color var(--transition-funktion);
+}
+
+.header .current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--accent-color);
+  border-radius: 2px;
 }
 
 /* header address*/
@@ -332,9 +334,9 @@ body {
 .possabilities-wrapper {
   position: relative;
   display: flex;
-  }
+}
 
-.possabilities-description {
+.possabilities-description-wrapper {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -346,11 +348,11 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--accent-color-text);  
+  color: var(--accent-color-text);
   width: 100%;
   min-height: 70px;
   background: rgba(47, 48, 58, 0.8);
-  }
+}
 
 /*===============END SECTION OUR possibilities======================*/
 
@@ -454,8 +456,6 @@ body {
   border-radius: 4px;
 
   transition: border var(--transition-funktion);
-  
-  
 }
 
 .clients-list-item:not(:last-child) {
@@ -533,8 +533,6 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--accent-color-text);
-
-  
 }
 
 .footer-social-item:not(:last-child) {
@@ -588,7 +586,9 @@ body {
   border: 1px solid transparent;
   padding: 6px 22px;
 
-  transition: color var(--transition-funktion), background-color var(--transition-funktion), box-shadow var(--transition-funktion);
+  transition: color var(--transition-funktion),
+    background-color var(--transition-funktion),
+    box-shadow var(--transition-funktion);
 }
 
 .btn-portfolio:hover,
@@ -650,7 +650,6 @@ body {
 
 .project-link:hover,
 .project-link:focus {
-  border: 1px solid var(--border-color-projects);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -662,11 +661,10 @@ body {
   margin: 0;
   padding: 63px 24px;
   font-size: 18px;
-  line-height: 1.56; 
+  line-height: 1.56;
   letter-spacing: 0.03em;
   background-color: var(--accent-color);
   color: var(--accent-color-text);
-  height: 100%;
   overflow: auto;
 
   transform: translateY(100%);
@@ -679,7 +677,7 @@ body {
 }
 
 .project-link:hover .overlay-portfolio,
-.project-link:focus .overlay-portfolio{
+.project-link:focus .overlay-portfolio {
   transform: translateY(0%);
 }
 /*==================END PORTFOLIO PROJECTS=======================*/
@@ -709,7 +707,7 @@ body {
   height: 100vh;
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.2);
-  transition:  opacity var(--transition-funktion);
+  transition: opacity var(--transition-funktion);
 }
 
 .modal {
@@ -746,13 +744,11 @@ body {
   visibility: hidden;
   pointer-events: none;
   transition: var(--timing-funktion);
-
 }
 
 .icon-close {
   fill: currentColor;
   width: 18px;
   height: 18px;
-  
 }
 /*===============END MODAL-BTN======================*/
