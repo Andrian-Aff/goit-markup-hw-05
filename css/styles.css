@@ -658,7 +658,6 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  margin: 0;
   padding: 63px 24px;
   font-size: 18px;
   line-height: 1.56;
@@ -674,7 +673,6 @@ body {
 .progect-list-wrapper {
   position: relative;
   overflow: hidden;
-  height: 100%;
 }
 
 .project-link:hover .overlay-portfolio,
